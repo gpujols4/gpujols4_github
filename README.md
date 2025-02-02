@@ -32,11 +32,9 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 
 ### DATA ANALYTICS
 
-| Repository | Description | License |
+| Repository | Descripción | Comentarios |
 | --- | --- | --- |
-| [Analisis_expirotorio](https://github.com/sindresorhus/awesome) | Análisis/exploración inicial de un dataframe para la limpieza de datos  | [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/legalcode) |
-| [Awesome](https://github.com/awesome-windows/awesome) | 💻 🎉 An awesome & curated list of best applications and tools for **Windows** | [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/legalcode) |
-| [Awesomeness](https://github.com/bayandin/awesome-awesomeness) | A curated list of awesome awesomeness | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/legalcode) |
+| [Analisis_expirotorio](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/analisis_exploracion_inicial) | Análisis/exploración inicial de un dataframe para la limpieza de datos  | None |
 
 **[⬆ Back to Index](#index)**
 
