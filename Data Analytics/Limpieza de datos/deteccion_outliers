@@ -1,0 +1,31 @@
+# FUNCIÓN PARA DETECTAR OUTLIERS
+def deteccion_outliers (df, variable):
+    # Suponiendo que tienes un DataFrame df y quieres analizar la columna 'columna_de_interes'
+    columna = df[variable]
+
+    sns.boxplot(
+      data=df,
+      y=variable,
+    )
+    plt.show()
+
+    Q1 = columna.quantile(0.25)
+    Q3 = columna.quantile(0.75)
+    IQR = Q3 - Q1
+
+    print('Valor del segundo cuartil (25%): {:.2f}'.format(Q1))
+    print('Valor del tercer cuartil (75%): {:.2f}'.format(Q3))
+    print('Valor del rango intercuartil (IQR): {:.2f}'.format(IQR))
+
+    limite_inferior = Q1 - 1.5 * IQR
+    limite_superior = Q3 + 1.5 * IQR
+
+    print(f"Los valores atípicos se definen como aquellos que caen fuera del siguiente rango:")
+    print(f"\t - Límite inferior (considerado extremadamente bajo): {limite_inferior:.2f}")
+    print(f"\t - Límite superior (considerado extremadamente alto): {limite_superior:.2f}")
+
+
+    outilers = list(columna[((columna < limite_inferior) | (columna > limite_superior))].index)
+    num_outliers = len(outilers)
+    print(f"Hay {num_outliers} outliers en la variable '{variable}'")
+    return outilers

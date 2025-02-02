@@ -1,0 +1,28 @@
+ #La función `realizar_crosstab` genera una tabla de contingencia que muestra tanto los conteos absolutos como los porcentajes de dos variables categóricas en un DataFrame.
+
+# PARÁMETROS: 
+#- `df`: El DataFrame que contiene los datos.
+#- `variable_categorica_1`: El nombre de la primera columna categórica que se utilizará para la tabla de contingencia.
+#- `variable_categorica_2`: El nombre de la segunda columna categórica que se utilizará para la tabla de contingencia.
+#- `normalize`: Un booleano que indica si se deben calcular los porcentajes en la tabla (True) o solo los conteos absolutos (False).
+
+def realizar_crosstab(df, variable_categorica_1, variable_categorica_2, normalize):
+    # Crear una tabla de contingencia con conteos absolutos
+    aux_p1 = pd.crosstab(df[variable_categorica_1], df[variable_categorica_2], margins=True)
+
+    # Crear una tabla de contingencia con porcentajes
+    aux_p2 = (pd.crosstab(df[variable_categorica_1],
+                          df[variable_categorica_2],
+                          normalize=normalize,
+                          margins=True
+                          ) * 100).round(2)
+
+    # Concatenar ambas tablas para tener conteos y porcentajes en una sola tabla
+    tabla_contingencia = pd.concat([aux_p1, aux_p2], axis=1)
+
+    return tabla_contingencia
+
+
+
+# UTILIDAD:  
+#Esta función permite crear una tabla de contingencia que facilita el análisis de la relación entre dos variables categóricas, mostrando tanto los conteos como los porcentajes de las combinaciones de categorías. Es útil para identificar patrones, asociaciones y la distribución relativa entre diferentes grupos en el conjunto de datos.

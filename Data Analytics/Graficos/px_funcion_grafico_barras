@@ -1,4 +1,5 @@
 
+# GRAFICO DE BARRAS VARIABLE ANALISIS
 def graficar_barras_px (df, variable_analisis):
     # Contar la frecuencia de la variable de análisis
     volumen = df[variable_analisis].value_counts().reset_index()
@@ -11,6 +12,43 @@ def graficar_barras_px (df, variable_analisis):
                       xaxis_title=variable_analisis,
                       yaxis_title='Volumen',
                       xaxis={'categoryorder':'total descending'})
+
+    # Actualizar el fondo del gráfico a blanco
+    fig.update_layout({
+        'plot_bgcolor': 'rgba(255, 255, 255, 1)',
+        'xaxis': {'showgrid': True, 'gridcolor': 'lightgrey'},
+        'yaxis': {'showgrid': True, 'gridcolor': 'lightgrey'}
+    })
+
+    fig.show()
+
+# GRAFICO DE BARRAS VARIABLE ANALISIS RELATIVO
+
+def graficar_barras_relativo_px(df, variable_analisis):
+    """
+    Definición:
+    La función graficar_barras_relativo_px genera un gráfico de barras utilizando la librería Plotly Express para visualizar la frecuencia relativa (porcentaje) de una variable categórica en un DataFrame.
+
+    Parámetros:
+    - df: El DataFrame que contiene los datos.
+    - variable_analisis: El nombre de la columna en el DataFrame cuya frecuencia relativa se desea representar en el gráfico de barras.
+
+    Utilidad:
+    Esta función permite crear gráficos de barras que muestran la distribución porcentual de una variable categórica, facilitando la comparación visual entre categorías. El gráfico incluye etiquetas con los porcentajes, mejorando la interpretación de los datos y ayudando a identificar tendencias en la distribución de la variable analizada.
+    """
+
+    # Calcular la frecuencia relativa de la variable de análisis
+    volumen = df[variable_analisis].value_counts(normalize=True).reset_index()
+    volumen.columns = [variable_analisis, 'Porcentaje']
+    volumen['Porcentaje'] *= 100  # Convertir a porcentaje
+
+    # Crear el gráfico de barras
+    fig = px.bar(volumen, x=variable_analisis, y='Porcentaje', text=volumen['Porcentaje'].apply(lambda x: f'{x:.2f}%'))
+    fig.update_traces(texttemplate='%{text}', textposition='outside')
+    fig.update_layout(title_text=f'Gráfico de barras relativo: {variable_analisis}',
+                        xaxis_title=variable_analisis,
+                        yaxis_title='Porcentaje',
+                        xaxis={'categoryorder': 'total descending'})
 
     # Actualizar el fondo del gráfico a blanco
     fig.update_layout({

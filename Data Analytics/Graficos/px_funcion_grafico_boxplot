@@ -1,0 +1,42 @@
+# FUNCIÓN PARA HACER UN BOXPLOT 
+def graficar_boxplot_px(df, variable_analisis, width=500, height=400):
+    # Crear el boxplot usando Plotly Express
+    fig = px.box(df, y=variable_analisis)
+
+    # Actualizar el tamaño del gráfico directamente
+    fig.layout.width = width
+    fig.layout.height = height
+
+    # Actualizar títulos del gráfico
+    fig.update_layout(title=f'Boxplot: {variable_analisis}',
+                      yaxis_title='Frecuencia')
+
+    # Actualizar el fondo del gráfico a blanco
+    fig.update_layout({
+        'plot_bgcolor': 'rgba(255, 255, 255, 1)',
+        'xaxis': {'showgrid': True, 'gridcolor': 'lightgrey'},
+        'yaxis': {'showgrid': True, 'gridcolor': 'lightgrey'}
+    })
+
+    # Mostrar el gráfico
+    fig.show()
+
+# FUNCIÓN BOXPLOT BIVARIABLE (VARIABLE ANALISIS + CATEGORICA)
+def graficar_boxplot_bivariable_px (df, variable_analisis, variable_categorica, width=500, height=400):
+    # Crear el boxplot usando Plotly Express
+    fig = px.box(df, x=variable_categorica, y=variable_analisis, color=variable_categorica)
+
+    # Actualizar títulos del gráfico
+    fig.update_layout(title=f'Boxplot de {variable_analisis} por {variable_categorica}',
+                      xaxis_title=variable_categorica,
+                      yaxis_title=variable_analisis)
+
+    # Actualizar el fondo del gráfico a blanco
+    fig.update_layout({
+        'plot_bgcolor': 'rgba(255, 255, 255, 1)',
+        'xaxis': {'showgrid': True, 'gridcolor': 'lightgrey'},
+        'yaxis': {'showgrid': True, 'gridcolor': 'lightgrey'}
+    })
+
+    # Mostrar el gráfico
+    fig.show()

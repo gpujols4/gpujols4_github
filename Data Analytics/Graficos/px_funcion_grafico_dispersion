@@ -1,0 +1,17 @@
+# GRAFICO DE DISPERSIÓN CON 2 VARIABLE
+def graficar_correlacion(df, variable_x, variable_y):
+    # Crear el gráfico de dispersión usando Plotly Express para visualizar la correlación
+    fig = px.scatter(df, x=variable_x, y=variable_y,
+                     trendline='ols',  # Añade una línea de regresión
+                     labels={variable_x: variable_x, variable_y: variable_y},
+                     title=f'Correlación entre {variable_x} y {variable_y}')
+
+    # Actualizar el fondo del gráfico a blanco y ajustar la cuadrícula
+    fig.update_layout({
+        'plot_bgcolor': 'rgba(255, 255, 255, 1)',
+        'xaxis': {'showgrid': True, 'gridcolor': 'lightgrey'},
+        'yaxis': {'showgrid': True, 'gridcolor': 'lightgrey'}
+    })
+
+    # Mostrar el gráfico
+    fig.show()
