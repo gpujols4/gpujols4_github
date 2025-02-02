@@ -1,0 +1,92 @@
+import pandas as pd
+import requests
+from bs4 import BeautifulSoup
+import time
+import random
+import re
+from urllib.parse import urljoin, urlparse
+from google.colab import drive
+drive.mount('/content/drive')
+
+def crawl_domain(start_url, max_pages=10000):
+    """
+    Rastrea URLs dentro de un dominio específico.
+
+    Args:
+        start_url (str): URL inicial para comenzar el rastreo
+        max_pages (int): Número máximo de páginas a rastrear
+
+    Returns:
+        set: Conjunto de URLs únicas encontradas
+    """
+    # Obtener el dominio base
+    base_domain = urlparse(start_url).netloc
+
+    # Conjuntos para llevar registro
+    urls_encontradas = set()
+    urls_por_visitar = {start_url}
+    urls_visitadas = set()
+
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+    }
+
+    while urls_por_visitar and len(urls_visitadas) < max_pages:
+        # Obtener la siguiente URL
+        url_actual = urls_por_visitar.pop()
+
+        if url_actual in urls_visitadas:
+            continue
+
+        print(f"Rastreando: {url_actual}")
+
+        try:
+            # Hacer la petición HTTP con tiempo de espera
+            response = requests.get(url_actual, headers=headers, timeout=10)
+            response.raise_for_status()
+
+            # Marcar como visitada
+            urls_visitadas.add(url_actual)
+
+            # Parsear el HTML
+            soup = BeautifulSoup(response.text, 'html.parser')
+
+            # Encontrar todos los enlaces
+            for link in soup.find_all('a'):
+                href = link.get('href')
+                if not href:
+                    continue
+
+                # Convertir URLs relativas a absolutas
+                url_completa = urljoin(url_actual, href)
+
+                # Verificar si la URL pertenece al mismo dominio
+                if urlparse(url_completa).netloc == base_domain:
+                    urls_encontradas.add(url_completa)
+                    if url_completa not in urls_visitadas:
+                        urls_por_visitar.add(url_completa)
+
+            # Esperar un poco entre peticiones para no sobrecargar el servidor
+            time.sleep(1)
+
+        except Exception as e:
+            print(f"Error al procesar {url_actual}: {str(e)}")
+            continue
+
+    return urls_encontradas
+
+# Ejemplo de uso
+if __name__ == "__main__":
+    dominio = "https://www.dominio.com/"  # Reemplaza con tu dominio
+    urls = crawl_domain(dominio, max_pages=10000)
+
+    # Guardar resultados en un archivo
+    with open('urls.txt', 'w') as f:
+        for url in sorted(urls):
+            f.write(url + '\n')
+
+    print(f"\nSe encontraron {len(urls)} URLs únicas")
+
+
+    # Guardar resultados en un data frame
+    df_urls = pd.DataFrame(urls)
