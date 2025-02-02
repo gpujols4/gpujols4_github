@@ -11,7 +11,7 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 
 </div> <br>
 
-> Repositorio de prueba. Proyectos de technical SEO, SEM y Data Analytics.
+> Repositorio de aprendizaje. Recursos, funciones y proyectos para technical SEO, SEM y Data Analytics.
 
 
 # Index
@@ -21,7 +21,7 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 
 ## SEO
 
-| Repository | Descripción | Comentarios |
+| Funciones | Descripción | Comentarios |
 | --- | --- | --- |
 | [Rastreo de URLs](https://github.com/gpujols4/gpujols4_github/blob/main/SEO/Rastreo_urls_dominios) | Función para rastrear todas las URL actuales de un dominio. | None | 
 [Checklist SEO](https://github.com/gpujols4/gpujols4_github/blob/main/SEO/Checklist_SEO) | Función para rastrear los principales factores de SEO on page de una URL.| None |
@@ -33,7 +33,7 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 ## DATA
 ### Exploración inicial
 
-| Tipo de análisis | Descripción | Comentarios |
+| Funciones | Descripción | Comentarios |
 | --- | --- | --- |
 | [Analisis_exploración](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/analisis_exploracion_inicial) | Análisis/exploración inicial de un dataframe para la limpieza de datos.  | None |
 
