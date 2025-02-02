@@ -3,7 +3,7 @@ Proyectos de Guillem Pujols
 
 <div align='center'>
 
-# Awesome Repositories
+# DATA/SEO/SEM/ Repositories
 
 _A curated list of GitHub Repositories full of FREE Resources._ <br>
 
