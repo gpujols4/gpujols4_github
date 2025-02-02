@@ -1,0 +1,91 @@
+
+#Librerias
+import pandas as pd
+import requests
+from bs4 import BeautifulSoup
+from urllib.parse import urlparse
+import time
+import random
+import re
+from google.colab import drive
+drive.mount('/content/drive')
+
+# Poner el path de todas las URL a pasar (xlsx or csv)
+df_url_checklist = pd.read_excel('path.xlsx')
+
+
+def extract_page_elements_bs4(url):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+    }
+
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()
+
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Extraer título
+        title = soup.title.string if soup.title else "Not found"
+
+        # Extraer meta description
+        meta_description_tag = soup.find('meta', attrs={'name': 'description'})
+        meta_description = meta_description_tag['content'] if meta_description_tag else "Not found"
+
+        # Extraer headings
+        h1_tags = soup.find_all('h1')
+        h2_tags = soup.find_all('h2')
+        h3_tags = soup.find_all('h3')
+
+        # Procesar H1s
+        h1_texts = [tag.get_text(strip=True) for tag in h1_tags] if h1_tags else ["Not found"]
+
+        # Procesar H2s
+        h2_texts = [tag.get_text(strip=True) for tag in h2_tags] if h2_tags else ["Not found"]
+
+        # Procesar H3s
+        h3_texts = [tag.get_text(strip=True) for tag in h3_tags] if h3_tags else ["Not found"]
+
+        # Extraer información de imágenes
+        images = soup.find_all('img')
+        image_data = []
+
+        for img in images:
+            # Obtener el nombre del archivo de la URL de la imagen
+            src = img.get('src', '')
+            filename = src.split('/')[-1] if src else "No filename"
+
+            # Obtener el atributo alt
+            alt_text = img.get('alt', 'No alt text')
+
+            image_data.append({
+                'filename': filename,
+                'alt': alt_text
+            })
+
+        return title, meta_description, h1_texts, h2_texts, h3_texts, image_data
+
+    except Exception as e:
+        print(f"Error fetching url: {str(e)}")
+        return "Error", "Error", ["Error"], ["Error"], ["Error"], []
+    
+    # Procesar les URLs con un bucle for
+urls = df_url_checklist['url'].tolist()
+results = []
+
+for url in urls:
+    domain = urlparse(url).netloc
+    title, description, h1s, h2s, h3s, images = extract_page_elements_bs4(url)
+    results.append({
+        'Dominio': domain,
+        'Url': url,
+        'Título': title,
+        'Metadescripcion': description,
+        'H1s': h1s,
+        'H2s': h2s,
+        'H3s': h3s,
+        'Imagenes': images
+    })
+
+# Crear DataFrame con los resultados del Checklist SEO
+df_results = pd.DataFrame(results)
