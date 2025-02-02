@@ -11,12 +11,12 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 
 </div> <br>
 
-> Mi experiencia como SEO, SEM y Data Analytics
+> Repositorio de prueba. Proyectos y experiencia como technical SEO, SEM y Data Analytics.
 
 
 ## Index
 
--   [API](#api)
+-   [SEO](#SEO)
 -   [Artificial Intelligence](#artificial-intelligence)
 -   [Awesome](#awesome)
 -   [BackEnd](#backend)
