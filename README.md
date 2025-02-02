@@ -43,12 +43,12 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 
 |   Gráficos | Descripción | Comentarios |
 | --- | --- | --- |
-| [Gráfico de barras](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_grafico_barras) | Función para hacer un gráfico de barras.  | None |
-| [Gráfico histograma](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_histograma) | Distintas funciones para hacer gráficos (histograma) en función del tipo de variable.  | None |
-| [Gráfico de correlación](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_grafico_correlacion) | Gráfico para ver la correlación entre dos variables.  | None |
-| [Gráfico Pástel](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_grafico_pastel) | Gráfico para hacer un gráfico de tipo pástel (Queso).  | None |
-| [Gráfico boxplot](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_grafico_boxplot) | Función para hacer un gráfico boxplot.  | None |
-| [Gráfico de dispersión](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_grafico_dispersion) | Función para hacer un gráfico de dispersión.  | None |
+| [Gráfico de barras](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_grafico_barras) | Función para hacer un gráfico de barras.  | Plotly Express |
+| [Gráfico histograma](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_histograma) | Distintas funciones para hacer gráficos (histograma) en función del tipo de variable.  | Plotly Express |
+| [Gráfico de correlación](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_grafico_correlacion) | Gráfico para ver la correlación entre dos variables.  | Plotly Express |
+| [Gráfico Pástel](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_grafico_pastel) | Gráfico para hacer un gráfico de tipo pástel (Queso).  | Plotly Express |
+| [Gráfico boxplot](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_grafico_boxplot) | Función para hacer un gráfico boxplot.  | Plotly Express |
+| [Gráfico de dispersión](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_grafico_dispersion) | Función para hacer un gráfico de dispersión.  | Plotly Express |
 
 
 **[⬆ Back to Index](#index)**
