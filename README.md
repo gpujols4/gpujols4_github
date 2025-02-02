@@ -1,7 +1,7 @@
 # gpujols4_github
 <div align='center'>
 
-# DATA/SEO/SEM/ Repositories
+# DATA / SEO / SEM
 
 _A curated list of GitHub Repositories full of FREE Resources._ <br>
 
