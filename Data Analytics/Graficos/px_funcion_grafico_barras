@@ -1,0 +1,22 @@
+
+def graficar_barras_px (df, variable_analisis):
+    # Contar la frecuencia de la variable de análisis
+    volumen = df[variable_analisis].value_counts().reset_index()
+    volumen.columns = [variable_analisis, 'Volumen']
+
+    # Crear el gráfico de barras
+    fig = px.bar(volumen, x=variable_analisis, y='Volumen', text='Volumen')
+    fig.update_traces(texttemplate='%{text}', textposition='outside')
+    fig.update_layout(title_text=f'Gráfico de barras: {variable_analisis}',
+                      xaxis_title=variable_analisis,
+                      yaxis_title='Volumen',
+                      xaxis={'categoryorder':'total descending'})
+
+    # Actualizar el fondo del gráfico a blanco
+    fig.update_layout({
+        'plot_bgcolor': 'rgba(255, 255, 255, 1)',
+        'xaxis': {'showgrid': True, 'gridcolor': 'lightgrey'},
+        'yaxis': {'showgrid': True, 'gridcolor': 'lightgrey'}
+    })
+
+    fig.show()

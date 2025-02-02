@@ -1,0 +1,15 @@
+# Manipulación y análisis de datos
+import pandas as pd
+import numpy as np
+
+# Visualización de datos
+import matplotlib.pyplot as plt
+import plotly.express as px
+import seaborn as sns
+
+# Expresiones regulares
+import re
+from fuzzywuzzy import process
+
+import warnings
+warnings.filterwarnings('ignore')
