@@ -17,7 +17,7 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 ## Index
 
 -   [SEO](#SEO)
--   [DATA_ANALYTICS](#DATA ANALYTICS)
+-   [DATA ANALYTICS](#DATA_ANALYTICS)
 
 ### SEO
 
