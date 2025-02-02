@@ -17,7 +17,7 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 ## Index
 
 -   [SEO](#SEO)
--   [Data Analytics](#DATA ANALYTICS)
+-   [Data Analytics](#DATA)
 
 ### SEO
 
@@ -34,7 +34,7 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 
 | Repository | Descripción | Comentarios |
 | --- | --- | --- |
-| [Analisis_expirotorio](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/analisis_exploracion_inicial) | Análisis/exploración inicial de un dataframe para la limpieza de datos  | None |
+| [Analisis_exploración](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/analisis_exploracion_inicial) | Análisis/exploración inicial de un dataframe para la limpieza de datos  | None |
 
 **[⬆ Back to Index](#index)**
 
