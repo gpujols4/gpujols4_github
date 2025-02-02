@@ -6,10 +6,27 @@ import numpy as np
 import matplotlib.pyplot as plt
 import plotly.express as px
 import seaborn as sns
+import missingno as msno
+
 
 # Expresiones regulares
 import re
 from fuzzywuzzy import process
+import os
+#La instrucción `import os` en Python permite acceder a funciones del sistema operativo, como manipular directorios, archivos o variables del entorno.
+
+from dateutil import parser
 
 import warnings
 warnings.filterwarnings('ignore')
+
+
+
+
+
+
+
+
+
+
+

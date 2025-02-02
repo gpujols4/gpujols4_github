@@ -29,10 +29,12 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 **[⬆ Back to Index](#index)**
 
 ## DATA
+
 ### Exploración inicial
 
 | Funciones | Descripción | Comentarios |
 | --- | --- | --- |
+| [Librerias de data analytics](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/librerias_data_analytics) | Librerias para poder hacer data analytics.  | None |
 | [Analisis_exploración](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/analisis_exploracion_inicial) | Análisis/exploración inicial de un dataframe para la limpieza de datos.  | None |
 | [Procesar fechas](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Limpieza%20de%20datos/tabla_de_contingenia) | La función `try_parse_date` intenta convertir una cadena de texto en un objeto de fecha.  | None |
 | [Detección de outliers](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Limpieza%20de%20datos/deteccion_outliers) | Función para detectar outliers.  | None |
@@ -48,6 +50,7 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 | [Gráfico Pástel](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_grafico_pastel) | Gráfico para hacer un gráfico de tipo pástel (Queso).  | Plotly Express |
 | [Gráfico boxplot](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_grafico_boxplot) | Función para hacer un gráfico boxplot.  | Plotly Express |
 | [Gráfico de dispersión](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_grafico_dispersion) | Función para hacer un gráfico de dispersión.  | Plotly Express |
+| [Gráfico mapa de calor](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/sns_funcion_mapa_de_calor) | Función para hacer un mapa de calor.  | Seaborn |
 
 
 **[⬆ Back to Index](#index)**
