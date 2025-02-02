@@ -1,6 +1,4 @@
 # gpujols4_github
-Proyectos de Guillem Pujols
-
 <div align='center'>
 
 # DATA/SEO/SEM/ Repositories
@@ -11,7 +9,7 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 
 </div> <br>
 
-> Repositorio de aprendizaje. Recursos, funciones y proyectos para technical SEO, SEM y Data Analytics.
+> Repositorio de aprendizaje de Guillem Pujols. Recursos, funciones y proyectos para technical SEO, SEM y Data Analytics.
 
 
 # Index
