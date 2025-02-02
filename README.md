@@ -36,8 +36,8 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 | Funciones | Descripción | Comentarios |
 | --- | --- | --- |
 | [Analisis_exploración](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/analisis_exploracion_inicial) | Análisis/exploración inicial de un dataframe para la limpieza de datos.  | None |
-| [Detección de outliers](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Limpieza%20de%20datos/deteccion_outliers) | Función para detecar outliers.  | None |
-| [Tabla de contingencia](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Limpieza%20de%20datos/tabla_de_contingenia) | Función para detecar outliers.  | None |
+| [Detección de outliers](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Limpieza%20de%20datos/deteccion_outliers) | Función para detectar outliers.  | None |
+| [Tabla de contingencia](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Limpieza%20de%20datos/tabla_de_contingenia) | Función para hacer una tabla de contingencia de variable categóricas.  | None |
 
 ### Gráficos
 
