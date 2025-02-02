@@ -36,6 +36,8 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 | Funciones | Descripción | Comentarios |
 | --- | --- | --- |
 | [Analisis_exploración](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/analisis_exploracion_inicial) | Análisis/exploración inicial de un dataframe para la limpieza de datos.  | None |
+| [Detección de outliers](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Limpieza%20de%20datos/deteccion_outliers) | Función para detecar outliers.  | None |
+| [Tabla de contingencia](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Limpieza%20de%20datos/tabla_de_contingenia) | Función para detecar outliers.  | None |
 
 ### Gráficos
 
@@ -45,6 +47,8 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 | [Gráfico histograma](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_histograma) | Distintas funciones para hacer gráficos (histograma) en función del tipo de variable.  | None |
 | [Gráfico de correlación](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_grafico_correlacion) | Gráfico para ver la correlación entre dos variables.  | None |
 | [Gráfico Pástel](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_grafico_pastel) | Gráfico para hacer un gráfico de tipo pástel (Queso).  | None |
+| [Gráfico boxplot](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_grafico_boxplot) | Función para hacer un gráfico boxplot.  | None |
+| [Gráfico de dispersión](https://github.com/gpujols4/gpujols4_github/blob/main/Data%20Analytics/Graficos/px_funcion_grafico_dispersion) | Función para hacer un gráfico de dispersión.  | None |
 
 
 **[⬆ Back to Index](#index)**
