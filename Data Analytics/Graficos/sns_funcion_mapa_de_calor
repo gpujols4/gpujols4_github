@@ -1,0 +1,7 @@
+#La función `realizar_correlaciones` genera un mapa de calor que muestra la correlación entre un conjunto de variables en un DataFrame.
+def realizar_correlaciones(df, listado_variables):
+    sns.heatmap(df[listado_variables].corr(), annot = True)
+
+#Parámetros:
+#`df`: El DataFrame con los datos a analizar.
+#`listado_variables`: Una lista de nombres de columnas del DataFrame que se utilizarán para calcular y visualizar las correlaciones.

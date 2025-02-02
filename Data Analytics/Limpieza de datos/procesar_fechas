@@ -1,0 +1,11 @@
+#Utilidad:  
+#Esta función es útil cuando se trabaja con datos que contienen fechas en múltiples formatos o cuando existen valores nulos o incorrectos. Evita errores en el procesamiento y permite manejar fechas de manera más robusta en análisis de datos o transformación de información.
+
+def try_parse_date(date_str):
+    try:
+        return parser.parse(date_str)
+    except (ValueError, TypeError):
+        return None
+    
+# Parámetros:**  
+# `date_str`: Una cadena de texto que representa una fecha en cualquier formato compatible con `dateutil.parser.parse()`.  
