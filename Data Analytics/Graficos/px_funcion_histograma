@@ -19,7 +19,7 @@ def graficar_histograma_px (df, variable_analisis):
     fig.update_layout(xaxis_title=variable_analisis, yaxis_title='Frecuencia')
     fig.show()
 
-# GRÁFICO HISTOGRAMA NORMAL (2 VARIABLES CATEGÓRICAS)
+# GRÁFICO HISTOGRAMA (2 VARIABLES CATEGÓRICAS)
 def graficar_proporciones(df, variable_categorica_1, variable_categorica_2):
     # Crear el histograma con barras agrupadas por la segunda variable categórica
     fig = px.histogram(df, x=variable_categorica_1, color=variable_categorica_2,
@@ -44,4 +44,35 @@ def graficar_proporciones(df, variable_categorica_1, variable_categorica_2):
     # Mostrar el gráfico
     fig.show()
 
+# GRÁFICO HISTOGRAMA (1 variable de analisis + 1 variable categórica)
 
+def graficar_histograma_bivariable_px (df, variable_analisis, variable_categorica=None, bins=20, show_mean_median=True):
+    # Crear el histograma con la opción de segmentar por variable categórica
+    if variable_categorica:
+        fig = px.histogram(df, x=variable_analisis, color=variable_categorica, nbins=bins,
+                           title=f'Distribución de {variable_analisis} por {variable_categorica}')
+    else:
+        fig = px.histogram(df, x=variable_analisis, nbins=bins,
+                           title=f'Distribución de: {variable_analisis}')
+
+    # Opcional: Calcular y mostrar líneas de media y mediana
+    if show_mean_median:
+        mean_val = df[variable_analisis].mean()
+        median_val = df[variable_analisis].median()
+
+        # Añadir línea vertical para la media
+        fig.add_vline(x=mean_val, line_dash="dash", line_color="red",
+                      annotation_text=f"Media: {mean_val:.2f}", annotation_position="top right")
+
+        # Añadir línea vertical para la mediana
+        fig.add_vline(x=median_val, line_dash="dot", line_color="green",
+                      annotation_text=f"Mediana: {median_val:.2f}", annotation_position="top left")
+
+    # Actualizar títulos del gráfico
+    fig.update_layout(xaxis_title=variable_analisis, yaxis_title='Frecuencia',
+                      plot_bgcolor='rgba(255, 255, 255, 1)',
+                      xaxis_showgrid=True, xaxis_gridcolor='lightgrey',
+                      yaxis_showgrid=True, yaxis_gridcolor='lightgrey')
+
+    # Mostrar el gráfico
+    fig.show()

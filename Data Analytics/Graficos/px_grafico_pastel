@@ -1,0 +1,18 @@
+# GRÁFICO DE PASTEL 
+
+def graficar_pie_chart(df, variable_analisis):
+  df_ = df[variable_analisis].value_counts().reset_index()
+  df_.columns = [
+      variable_analisis,
+      'Volúmen'
+  ]
+
+  fig = px.pie(
+      df_,
+      names=variable_analisis,
+      values='Volúmen',
+      title=variable_analisis,
+      width=800,
+      height=500
+  )
+  fig.show()
