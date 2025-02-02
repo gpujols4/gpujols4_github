@@ -1,5 +1,5 @@
 # gpujols4_github
-Proyectos
+Proyectos de Guillem Pujols
 
 <div align='center'>
 
@@ -11,7 +11,7 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 
 </div> <br>
 
-> Mi experiencia en Data Analytics
+> Mi experiencia como SEO, SEM y Data Analytics
 
 
 ## Index

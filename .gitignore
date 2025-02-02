@@ -1,0 +1,4 @@
+# Posar arxius que es volen ocultar del repositori públic
+.env
+notas_guillem.txt
+/data
