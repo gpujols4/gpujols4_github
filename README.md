@@ -25,6 +25,7 @@ _A curated list of GitHub Repositories full of FREE Resources._ <br>
 | --- | --- | --- |
 | [Rastreo de URLs](https://github.com/gpujols4/gpujols4_github/blob/main/SEO/Rastreo_urls_dominios) | Función para rastrear todas las URL actuales de un dominio. | None | 
 [Checklist SEO](https://github.com/gpujols4/gpujols4_github/blob/main/SEO/Checklist_SEO) | Función para rastrear los principales factores de SEO on page de una URL.| None |
+[Semrush: datos orgánicos competencia](https://github.com/gpujols4/gpujols4_github/blob/main/SEO/Checklist_SEO) | Función extraer métricas de tráfico orgánico de los competidores| None |
 
 
 **[⬆ Back to Index](#index)**
